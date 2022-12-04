@@ -1,19 +1,24 @@
 import React from 'react';
 import './App.css';
-// import SearchBar component
-// import SearchResult component
-// import Playlist component
+import { SearchBar } from '../SearchBar/SearchBar';
+import { SearchResults } from '../SearchResults/SearchResults';
+import { Playlist } from '../Playlist/Playlist';
 
 export class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { searchResults: [] };
+  }
+
   render() {
     return (
       <div>
         <h1>Ja<span className='highlight'>mmm</span>ing</h1>
         <div className='App'>
-          {/* SearchBar component */}
+          <SearchBar />
             <div className='App-playlist'>
-              {/* SearchResult component */}
-              {/* Playlist component */}
+              <SearchResults searchResults={this.state.searchResults} />
+              <Playlist />
             </div>
         </div>
       </div>
