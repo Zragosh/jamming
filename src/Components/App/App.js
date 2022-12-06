@@ -38,6 +38,7 @@ export class App extends React.Component {
     };
 
     this.addTrack = this.addTrack.bind(this);
+    this.removeTrack = this.removeTrack(this);
   }
 
   addTrack(track) {
@@ -46,6 +47,11 @@ export class App extends React.Component {
       return;
     }
     tracks.push(track);
+    this.setState({playlistTracks: tracks});
+  }
+
+  removeTrack(track) {
+    let tracks = this.state.playlistTracks.filter(savedTrack => savedTrack.id !== track.id);
     this.setState({playlistTracks: tracks});
   }
 
