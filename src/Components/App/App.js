@@ -12,7 +12,7 @@ export class App extends React.Component {
         { name: "name1", artist: "artist1", album: "album1", id: 1 },
         { name: "name2", artist: "artist2", album: "album2", id: 2 },
         { name: "name3", artist: "artist3", album: "album4", id: 3 }
-      ],
+      ]
     };
   }
 
